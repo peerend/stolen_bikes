@@ -21,6 +21,7 @@ class BikesController < ApplicationController
     @bikes = Bike.all
     @bike = Bike.find(params[:id])
     render('bikes/show.html.erb')
+    
   end
 
   def update

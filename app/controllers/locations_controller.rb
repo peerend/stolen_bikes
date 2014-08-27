@@ -8,14 +8,24 @@ class LocationsController < ApplicationController
   def create
     @locations = Location.all
     @location = Location.new(params[:location])
-    @location.save
-    render('locations/index.html.erb')
+    if @location.save
+      flash[:notice] = "Your Bike has been reported"
+      render('locations/index.html.erb')
+    else
+      render('locations/show.html.erb')
+    end
   end
 
   def show
     @locations = Location.all
     @location = Location.find(params[:id])
-    render('locations/show.html.erb')
+    @bike = @location.bikes.new(params[:bike])
+    if @bike.save
+      flash[:notice] = "Your Bike has been reported"
+      redirect_to("/")
+    else
+      render('locations/show.html.erb')
+    end
   end
 
   def update
