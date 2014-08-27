@@ -5,11 +5,11 @@ class BikesController < ApplicationController
   end
 
   def create
-    @bikes = Sighting.all
+    @bikes = Bike.all
     @location = Location.find(params[:id])
     @bike = @location.bikes.new(params[:bike])
     @bike.save
-    render('bikes/index.html.erb')
+    redirect_to("/")
   end
 
   def show
