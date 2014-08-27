@@ -12,7 +12,6 @@ class CreateBikes < ActiveRecord::Migration
     end
 
     create_table :locations do |t|
-      t.string :address
       t.string :neighborhood
 
       t.timestamps

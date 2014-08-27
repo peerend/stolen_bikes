@@ -1,0 +1,9 @@
+<label for="bike_name">Bike Make and Model</label>
+<input id="bike_name" name="bike[name]" type="text" value="<%= @bike.name %>">
+<br>
+<label for="bike_serial">Bike Serial Number</label>
+<input id="bike_serial" name="bike[serial]" type="text" value="<%= @bike.serial %>">
+<br>
+<label for="bike_description"><em>Describe Bike</em></label>
+<br>
+<textarea id="bike_description" name="bike[description]" rows=10 cols = 40><%= @bike.description %></textarea>

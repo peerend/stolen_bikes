@@ -8,19 +8,28 @@
 <h3> Made a mistake? Update your report:</h3>
   <form action="/bikes/<%= @bike.id%>" method="post">
     <input name="_method" type="hidden" value="patch">
+    <br>
     <label for= "bike_name">Make and Model?</label>
-    <input id ="bike_name" name ="bike[date]" type="text" value='<%=@bike.name%>'>
+    <input id ="bike_name" name ="bike[name]" type="text" value='<%=@bike.name%>'>
+    <br>
     <label for= "bike_serial">Serial?</label>
-    <input id ="bike_serial" name ="bike[serial]" type="text" value='<%=@bike.serial%>'>>
+    <input id ="bike_serial" name ="bike[serial]" type="text" value='<%=@bike.serial%>'>
+    <br>
     <label for= "bike_description">Description?</label>
-    <input id ="bike_description" name ="bike[description]" type="text" value='<%=@bike.description%>'>>
+    <input id ="bike_description" name ="bike[description]" type="text" value='<%=@bike.description%>'>
+    <br>
     <button>Change Report</button>
   </form>
 
-<h3> Found Bike!</h3>
+<form action="/locations/<%=@bike.location.id%>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <br><%= render('/locations/form') %>
+  <br><button>Update Location</button>
+</form>
+
 <p><a href="/bikes/<%=@bike.id %>"
   data-confirm="Are you sure"
   data-method="Delete"
-  rel="nofollow">Remove Bike</a></p>
+  rel="nofollow">Found Bike (Remove from database)</a></p>
 
 

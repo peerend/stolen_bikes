@@ -5,7 +5,14 @@
 <h3>Recently Reported Bikes</h3>
 <ul>
   <% @bikes.sort_by{|bike| bike.created_at}.reverse.each do |bike| %>
-    <li><a href="/<%= bike.id %>"><%= bike.name %></a></li>
+    <li><a href="bikes/<%= bike.id %>"><%= bike.name %></a></li>
   <% end %>
 </ul>
 
+<h3>Bikes stolen by neighborhood</h3>
+
+<ul>
+  <% @locations.each do |location| %>
+    <li><%= location.neighborhood %> Stolen: <%=location.total_thefts%> </li>
+  <% end %>
+</ul>

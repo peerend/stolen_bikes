@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20140827022137) do
   end
 
   create_table "locations", force: true do |t|
-    t.string   "address"
     t.string   "neighborhood"
     t.datetime "created_at"
     t.datetime "updated_at"

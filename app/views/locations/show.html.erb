@@ -2,9 +2,13 @@
   <form action="/<%= @location.id%>" method="post">
     <label for= "bike_name">Make and Model</label>
     <input id ="bike_name" name ="bike[name]" type="text">
+    <br>
     <label for= "bike_serial">Serial Number?</label>
     <input id ="bike_serial" name ="bike[serial]" type="text">
+    <br>
     <label for= "bike_description">Description?</label>
-    <input id ="bike_description" name ="bike[description]" type="text">
+    <br>
+    <textarea id="bike_description" name="bike[description]" rows=10 cols = 40></textarea>
+    <br>
     <button>Add Report</button>
   </form>

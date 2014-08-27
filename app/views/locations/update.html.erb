@@ -1,0 +1,11 @@
+<h1>Edit <%= @location.neighborhood %></h1>
+
+<%= render('layouts/errors', :object => @location) %>
+
+<form action="/locations/<%=@location.id%>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render('form') %>
+  <br><button>Update Location</button>
+</form>
+
+<p><a href="/">Return to main page</a></p>

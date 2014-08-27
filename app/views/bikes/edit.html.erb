@@ -1,0 +1,11 @@
+<h1>Edit <%= @bike.name %></h1>
+
+<%= render('layouts/errors', :object => @bike) %>
+
+<form action="/bikes/<%=@bike.id%>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render('form') %>
+  <br><button>Update Report</button>
+</form>
+
+<p><a href="/">Return to main page</a></p>

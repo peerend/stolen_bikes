@@ -18,4 +18,10 @@ class LocationsController < ApplicationController
     render('locations/show.html.erb')
   end
 
+  def update
+    @locations = Location.all
+    @location = Location.find(params[:id])
+    @location.update(params[:location])
+    redirect_to('/')
+  end
 end
