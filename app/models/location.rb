@@ -7,4 +7,12 @@ class Location < ActiveRecord::Base
     Bike.where(location_id: self.id).count
   end
 
+  def self.unique_locations
+    locations = Location.all
+    neighborhoods = []
+    locations.each do |location|
+      neighborhoods << location.neighborhood.capitalize
+    end
+    neighborhoods.uniq!
+  end
 end

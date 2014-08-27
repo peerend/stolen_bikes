@@ -7,3 +7,10 @@
 <label for="bike_description"><em>Describe Bike</em></label>
 <br>
 <textarea id="bike_description" name="bike[description]" rows=10 cols = 40><%= @bike.description %></textarea>
+<br>
+<label for="bike_location">Theft Location</label>
+<select id="bike_location" name="bike[location_id]" type="number">
+  <%=@locations.each do |location|%>
+    <option value ="<%=location.id%>"><%=location.neighborhood%></option>
+  <%end%>>
+</select>

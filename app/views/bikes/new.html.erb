@@ -1,0 +1,10 @@
+<h2> Report your bike</h2>
+
+<%= render('layouts/errors', :object => @bike) %>
+
+<form action="/bikes/" method="post">
+  <%= render('form') %>
+  <br><button>Report Theft</button>
+</form>
+
+<p><a href="/">Return to main page</a></p>

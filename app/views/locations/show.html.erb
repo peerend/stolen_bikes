@@ -1,6 +1,5 @@
-<%= render('layouts/errors', :object => @bike) %>
 <h3> Report a theft:</h3>
-  <form action="/<%= @location.id%>" method="post">
+  <form action="/locations/<%= @location.id%>" method="post">
     <label for= "bike_name">Make and Model</label>
     <input id ="bike_name" name ="bike[name]" type="text">
     <br>

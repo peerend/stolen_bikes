@@ -1,6 +1,6 @@
 <h1>Stolen Bike Listing</h1>
 
-<a href="/locations"><h3>Report your bike as stolen</h3></a>
+<a href="/locations/"><h3>Report your bike as stolen</h3></a>
 
 <h3>Recently Reported Bikes</h3>
 <ul>
@@ -13,6 +13,6 @@
 
 <ul>
   <% @locations.each do |location| %>
-    <li><%= location.neighborhood %> Stolen: <%=location.total_thefts%> </li>
+    <li><%= location.neighborhood.capitalize %> Stolen: <%=location.total_thefts%> </li>
   <% end %>
 </ul>
