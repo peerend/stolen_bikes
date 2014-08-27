@@ -1,0 +1,11 @@
+<h1>Stolen Bike Listing</h1>
+
+<a href="/locations"><h3>Report your bike as stolen</h3></a>
+
+<h3>Recently Reported Bikes</h3>
+<ul>
+  <% @bikes.sort_by{|bike| bike.created_at}.reverse.each do |bike| %>
+    <li><a href="/<%= bike.id %>"><%= bike.name %></a></li>
+  <% end %>
+</ul>
+

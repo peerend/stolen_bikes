@@ -1,0 +1,10 @@
+<h3> Report a theft:</h3>
+  <form action="/<%= @location.id%>" method="post">
+    <label for= "bike_name">Make and Model</label>
+    <input id ="bike_name" name ="bike[name]" type="text">
+    <label for= "bike_serial">Serial Number?</label>
+    <input id ="bike_serial" name ="bike[serial]" type="text">
+    <label for= "bike_description">Description?</label>
+    <input id ="bike_description" name ="bike[description]" type="text">
+    <button>Add Report</button>
+  </form>

@@ -1,0 +1,14 @@
+<h1> Select where your bike was stolen from</h1>
+<ul>
+  <% @locations.each do |location| %>
+    <li><a href="/<%= location.id %>"><%= location.neighborhood.capitalize %></a></li>
+  <% end %>
+</ul>
+
+<form action="/locations" method="post">
+  <label for= "locations">Different Neighborhood?</label>
+  <input id ="locations" name ="location[neighborhood]" type="text">
+  <button>Add Neighborhood</button>
+</form>
+
+

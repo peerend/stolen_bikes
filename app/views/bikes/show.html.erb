@@ -1,0 +1,26 @@
+<h1>Stolen From <%=@bike.location.neighborhood%></h1>
+
+<h3>Make and Model: <%= @bike.name %></h3>
+<h3>Serial: <%= @bike.serial %></h3>
+<h5>Description: <%= @bike.description %></h5>
+
+
+<h3> Made a mistake? Update your report:</h3>
+  <form action="/bikes/<%= @bike.id%>" method="post">
+    <input name="_method" type="hidden" value="patch">
+    <label for= "bike_name">Make and Model?</label>
+    <input id ="bike_name" name ="bike[date]" type="text" value='<%=@bike.name%>'>
+    <label for= "bike_serial">Serial?</label>
+    <input id ="bike_serial" name ="bike[serial]" type="text" value='<%=@bike.serial%>'>>
+    <label for= "bike_description">Description?</label>
+    <input id ="bike_description" name ="bike[description]" type="text" value='<%=@bike.description%>'>>
+    <button>Change Report</button>
+  </form>
+
+<h3> Found Bike!</h3>
+<p><a href="/bikes/<%=@bike.id %>"
+  data-confirm="Are you sure"
+  data-method="Delete"
+  rel="nofollow">Remove Bike</a></p>
+
+

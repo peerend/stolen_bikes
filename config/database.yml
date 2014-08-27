@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+
+
+
+development:
+  <<: *default
+  database: stolen_bikes_development
+
+test:
+  <<: *default
+  database: stolen_bikes_test
