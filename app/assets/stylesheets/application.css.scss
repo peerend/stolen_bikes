@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+ margin: 5%;
+ background-image: url("http://riosriosrios.wordpress.com/files/2009/06/fixie-bike1.jpg");
+ background-size: 80%;
+ background-repeat: no-repeat;
+ display: compact;
+}
