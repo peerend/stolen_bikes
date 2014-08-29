@@ -1,0 +1,6 @@
+<h1>Your Search!</h1>
+
+  <% Bike.search(params[:search_term]).each do |bike| %>
+    <li><a href="/bikes/<%= bike.id %>"><%= bike.name %> Description: <%=bike.description%></a></li>
+  <%end%>
+

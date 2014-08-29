@@ -25,6 +25,11 @@ class BikesController < ApplicationController
     end
   end
 
+  def search
+    @bikes = Bike.all
+    render('bikes/searched.html.erb')
+  end
+
   def show
     @bikes = Bike.all
     @bike = Bike.find(params[:id])

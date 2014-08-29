@@ -13,6 +13,6 @@
 
 <ul>
   <% @locations.each do |location| %>
-    <li><%= location.neighborhood.capitalize %> Stolen: <%=location.total_thefts%> </li>
+    <li><a href="locations/<%=location.id%>/bikes"><%= location.neighborhood.capitalize %> Stolen: <%=location.total_thefts%> </li>
   <% end %>
 </ul>
