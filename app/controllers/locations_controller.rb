@@ -11,6 +11,11 @@ class LocationsController < ApplicationController
     end
   end
 
+  def locale
+    @location = Location.find(params[:id])
+    render('locations/locale.html.erb')
+  end
+  
   def create
     @locations = Location.all
     @location = Location.new(params[:location])

@@ -1,0 +1,14 @@
+<h1><%=@location.neighborhood%></h1>
+
+  <%if @location.total_thefts == 1%>
+    <h4>Just 1 Bike Stolen from <%=@location.neighborhood%>!</h4>
+  <%elsif @location.total_thefts == 0%>
+    <h4>No bikes have been reported in this neighborhoood!</h4>
+  <%else%>
+    <h4><%=@location.total_thefts%> Bikes have been stolen from <%=@location.neighborhood%></h4>
+  <%end%>
+<ul>
+<% @location.bikes.each do |bike|%>
+    <li><a href="/bikes/<%=bike.id%>"><%=bike.name%></a></li>
+<%end%>
+</ul>
