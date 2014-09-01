@@ -1,28 +1,12 @@
-== README
+== Stolen Bike Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple stolen bike registry designed for folks within Portland. The user may enter their neighborhood, a description of the stolen bike, and it's serial number. The index is searchable by bike and locaiton. 
 
-Things you may want to cover:
+Utilizes
 
-* Ruby version
+* Ruby 4
 
-* System dependencies
+* SASS
 
-* Configuration
+* Bootstrap
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
